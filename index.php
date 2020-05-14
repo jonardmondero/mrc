@@ -1,12 +1,17 @@
 
 <?php
+include('config/config.php');
 $alert_msg = '';
 $username=$password='';
 
 if(isset($_POST['insert'])){
-
-    $CHECK_USERNAME ="SELECT * FROM user where uname = :uname and upass = :upass";
-
+	$username =	$_POST['username'];
+	$password =	$_POST['upass'];
+    $CHECK_USERNAME =	"SELECT * FROM user where uname = :uname and upass = :upass";
+	$select_user 	= 	$con->prepare($CHECK_USERNAME);
+	$select_user	->	execute([':uname'	=>	$username,
+								':upass	'	=>	$password]);
+	
 
 
 }
