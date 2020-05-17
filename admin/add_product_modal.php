@@ -2,7 +2,7 @@
 <?php
 
 ?>
-<div  class="modal fade"   id="add_customer">
+<div  class="modal fade"   id="add_product">
      <div class="modal-dialog">
          
         <div style ="width:500px;" class="modal-content">
@@ -15,40 +15,27 @@
                     
                     
                      <div class="form-group row">
-                    <label for="username" class="col-sm-2 col-form-label ">Name: </label>
+                    <label for="username" class="col-sm-2 col-form-label ">Product Name: </label>
                     <div class="col-sm-10">
-                      <input type="text" name ="name" class="form-control" id="name" required>
+                      <input type="text" name ="productname" class="form-control" id="productname" required>
                     </div>  
                     </div>
 
 
                     <div class="form-group row">
-                    <label for="username" class="col-sm-2 col-form-label ">Contact No.: </label>
+                    <label for="username" class="col-sm-2 col-form-label ">Price: </label>
                     <div class="col-sm-10">
-                      <input type="number" name ="cnumber" class="form-control" id="cnumber" required>
+                      <input type="number" name ="price" class="form-control" id="price" required>
                     </div>  
                     </div>
 
-                    <div class="form-group row">
-                    <label for="username" class="col-sm-2 col-form-label ">Address </label>
-                    <div class="col-sm-10">
-                      <input type="text" name ="address" class="form-control" id="address" required>
-                    </div>  
-                    </div>
-
-                    <div class="form-group row">
-                    <label for="username" class="col-sm-2 col-form-label ">Place Detail </label>
-                    <div class="col-sm-10">
-                      <input type="textarea" name ="detail" class="form-control" id="detail" >
-                    </div>  
-                    </div>
                     
                   
 
 
                     <div class="modal-footer">
                 
-                       <button type = "submit" class="btn btn-primary btn-sm" name="insert_customer"><i class="fa fa-save"></i> Save</button>
+                       <button type = "submit" class="btn btn-primary btn-sm" name="insert_product"><i class="fa fa-save"></i> Save</button>
                        
                        <button class="btn btn-default btn-sm pull-left" data-dismiss="modal"><i class="fa fa-close"></i> Close</button>              
                     </div> <!-- modal footer -->

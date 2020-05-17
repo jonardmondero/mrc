@@ -46,10 +46,10 @@
             </a>
           </li>
              <li class="nav-item">
-            <a href="employee.php" class="nav-link">
+            <a id = "addproduct" class="nav-link">
               <i class="nav-icon fa fa-user"></i>
               <p>
-             Add Employee
+             Add Product
                
               </p>
             </a>

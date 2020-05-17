@@ -59,6 +59,10 @@ $('#addcustomer').click(function(){
 $('#add_customer').modal("show");
 
 })
+$('#addproduct').click(function(){
+$('#add_product').modal("show");
+
+})
 // $(document).ready(function() {  
 
 //   $('#insert_customer').click(function(){

@@ -55,7 +55,8 @@ include ('sidebar.php'); ?>
         
         <!-- Small boxes (Stat box) -->
        
-       <?php include('add_customer_modal.php');?>
+       <?php include('add_customer_modal.php');
+              include('add_product_modal.php');?>
      
     </section>
     <!-- /.content -->
