@@ -25,7 +25,7 @@
                     <div class="form-group row">
                     <label for="username" class="col-sm-2 col-form-label ">Contact No.: </label>
                     <div class="col-sm-10">
-                      <input type="text" name ="contact" class="form-control" id="contact" required>
+                      <input type="number" name ="contactno" class="form-control" required>
                     </div>  
                     </div>
 

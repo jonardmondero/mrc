@@ -49,8 +49,12 @@
 <!-- AdminLTE for demo purposes -->
 <script src="../dist/js/demo.js"></script>
 
+<script src="../plugins/datatables/jquery.dataTables.js"></script>
+<script src="../plugins/datatables/dataTables.bootstrap4.js"></script>
 <script>
-
+ $(function () {
+           $("#customers").DataTable();
+ })
 $('#addcustomer').click(function(){
 $('#add_customer').modal("show");
 

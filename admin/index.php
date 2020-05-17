@@ -45,7 +45,7 @@ include ('sidebar.php'); ?>
                <div class="card-header">
                 <h3 class="card-title">Search Customer</h3>
               </div>
-               
+               <?php include('tbl_customer.php');?>
 
                      </div>
           

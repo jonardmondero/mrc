@@ -2,7 +2,7 @@
 include('../config/config.php');
 if(isset($_POST['insert_customer'])){
 $name =    $_POST['name'];
-$contact = $_POST['contact'];
+$contact = $_POST['contactno'];
 $address = $_POST['address'];
 $detail =  $_POST['detail'];
 
