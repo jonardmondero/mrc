@@ -4,15 +4,24 @@ include('config/config.php');
 $alert_msg = '';
 $username=$password='';
 
-if(isset($_POST['insert'])){
+if(isset($_POST['login'])){
 	$username =	$_POST['username'];
 	$password =	$_POST['upass'];
-    $CHECK_USERNAME =	"SELECT * FROM user where uname = :uname and upass = :upass";
+    $CHECK_USERNAME =	"SELECT * FROM user where username = :uname and upass = :upass";
 	$select_user 	= 	$con->prepare($CHECK_USERNAME);
-	$select_user	->	execute([':uname'	=>	$username,
-								':upass	'	=>	$password]);
+	$select_user->execute([':uname'	=>	$username,
+						':upass'	=>	$password]);
 	
-
+	if($select_user->rowCount()	>	0){
+		while($result 	=	$select_user->fetch(PDO::FETCH_ASSOC)){
+		session_start();
+		$_SESSION['id']		=	$result['id'];
+		$_SESSION['uname']	=	$result['username'];
+		$_SESSION['account_type']	=	$result['account_type'];
+		
+	}
+	header('location: admin');
+	}
 
 }
 
@@ -54,7 +63,7 @@ if(isset($_POST['insert'])){
 	<div class="limiter">
 		<div class="container-login100">
 			<div class="wrap-login100">
-				<form class="login100-form validate-form">
+				<form class="login100-form validate-form" role="form" method="POST" action="<?php echo htmlspecialchars($_SERVER["PHP_SELF"]);?>">
 					<span class="login100-form-title p-b-43">
 						Login to continue
 					</span>
@@ -69,7 +78,7 @@ if(isset($_POST['insert'])){
 					
 					
 					<div class="wrap-input100 validate-input" >
-						<input class="input100" type="password" name="pass">
+						<input class="input100" type="password" name="upass">
 						<span class="focus-input100"></span>
 						<span class="label-input100">Password</span>
 					</div>
